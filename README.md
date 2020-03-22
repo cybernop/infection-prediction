@@ -23,13 +23,37 @@ python -m data_importer  --output-mode s3 --output-bucket cluno-data-raw --outpu
 
 ## create dataset with predicted values (datasource for tableau dashboard)
 * file: Calculations.xlsx
-### raw data
+#### raw data
 * sheet: Landkreis Einwohner
-* content: Einwohner pro Landkreis und Bundesland
-* source: https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0
+** content: Einwohner pro Landkreis und Bundesland
+** source: https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0
 
 * sheet: Infektionen
-* content: Anzahl Infektionen nach Meldedatum und Landkreis
-* source: https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0
+** content: Anzahl Infektionen nach Meldedatum, Landkreis, Geschlecht, Altersgruppe
+** source: https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0
+
+* sheet: dates_all
+** content: Eine Zahle pro Datum vom 2.1.2020 bis zum 31.5.2021
+
+#### intermediate tables
+* sheet: aggregated
+** content: Anzahl Infektionen aggregiert auf Meldedatum und Landkreis
+** source: sheet Infektionen
+
+* sheet: 
+
+#### final table for tableau upload
+* sheet: tableau_landkreis
+** content: 
+*** Eine Zeile pro Tag und Landkreis (manuelle Erzeugung aus sheets: dates_all und all_regions)
+*** Berechnung der Anzahl gleichzeitig Infizierten in der Zukunft
+*** Berechnung der Anzahl gleichzeitig Infizierten mit Krankenbettbedarf in der Zukunft
+*** Berechnung der Anzahl gleichzeitig Infizierten mit Krankenbettbedarf und schwerem Verlauf in der Zukunft
+*** Berechnung der Anzahl verfügbarer Krankenbetten pro Landkreis und Tag
+** source: other sheets in Calculations.xlsx
+
+#### graphics for quick check
+* sheet: results_quick_check
+** content: pivot-tables and graphics to check model prediction, before you upload files to tableau
 
 ## add data to tableau dashboard
