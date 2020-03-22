@@ -1,4 +1,11 @@
-# infection-prediction
+# Content
+here you can find all code and logic that you need to update this dashboard:
+https://public.tableau.com/profile/max.ehrlich#!/vizhome/InfectionDevelopment/Influencecontactrate?publish=yes
+
+the dashboard shows a timeseries about the development of infected people in germany dependend oon Bundesland and Landkreis and dependend on reduction of our social contacts. 
+it shows the strong impact on reducing social contacts on the number of infected people and the number of needed hospital beds, which will have a big influence in future over-utilization of these beds and the possibility of enough medical supply.
+
+# How to update Dashboard
 ## read datasource automatically and save it to your wished S3 path
 architecture around is not build yet (AWS Account with S3 bucket and daily running Lambdas)
 
