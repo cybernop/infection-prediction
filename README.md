@@ -69,5 +69,5 @@ python -m data_importer  --output-mode s3 --output-bucket cluno-data-raw --outpu
 * for every adjustment: save table (starting in cell D9, ending in cell Q200733) in tableau_source.xlsx in sheet "x%"
 * add a further column with the value of the adjusted parameter
 * format columns
-* save every sheet as csv file tableau_result_x.csv with x as percentage of adjusted parameter
+* save every sheet as csv file (CSV UTF-8 (durrch Trennzeichen getrennte Datei) tableau_result_x.csv with x as percentage of adjusted parameter
 * upload these csv-files into tableau public and union them together
