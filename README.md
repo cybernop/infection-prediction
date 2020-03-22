@@ -57,3 +57,10 @@ python -m data_importer  --output-mode s3 --output-bucket cluno-data-raw --outpu
   * content: pivot-tables and graphics to check model prediction, before you upload files to tableau
 
 ## add data to tableau dashboard
+* open sheet tableau_landkreis
+* adjust parameter in cell B3 to 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%
+* for every adjustment: save table (starting in cell D9, ending in cell Q200733) in tableau_source.xlsx in sheet "x%"
+* add a further column with the value of the adjusted parameter
+* format columns
+* save every sheet as csv file tableau_result_x.csv with x as percentage of adjusted parameter
+* upload these csv-files into tableau public and union them together
