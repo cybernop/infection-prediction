@@ -24,12 +24,12 @@ python -m data_importer  --output-mode s3 --output-bucket cluno-data-raw --outpu
 * code can be added to data_importer.zip for fully automated data preparation
 
 ## train model
-* file: Calculations.xlsx, sheet: model training
+* file: Calculations.xlsx, sheet: model training (https://devpost.com/software/infection-prediction)
 * import new dataset in line 3
 * adjust model parameters in column E, so that the model still fits to latest developments (check model fit in graphic in cell I44)
 
 ## create dataset with predicted values (datasource for tableau dashboard)
-* file: Calculations.xlsx
+* file: Calculations.xlsx (https://devpost.com/software/infection-prediction)
 #### raw data
 * sheet: Landkreis Einwohner
   * content: Einwohner pro Landkreis und Bundesland
@@ -69,5 +69,5 @@ python -m data_importer  --output-mode s3 --output-bucket cluno-data-raw --outpu
 * for every adjustment: save table (starting in cell D9, ending in cell Q200733) in tableau_source.xlsx in sheet "x%"
 * add a further column with the value of the adjusted parameter
 * format columns
-* save every sheet as csv file (CSV UTF-8 (durrch Trennzeichen getrennte Datei) tableau_result_x.csv with x as percentage of adjusted parameter
+* save every sheet as csv file (CSV UTF-8 (durch Trennzeichen getrennte Datei) tableau_result_x.csv with x as percentage of adjusted parameter (find files in this github repository)
 * upload these csv-files into tableau public and union them together
