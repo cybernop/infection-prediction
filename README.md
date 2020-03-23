@@ -24,12 +24,12 @@ python -m data_importer  --output-mode s3 --output-bucket cluno-data-raw --outpu
 * code can be added to data_importer.zip for fully automated data preparation
 
 ## train model
-* file: Calculations.xlsx, sheet: model training (https://devpost.com/software/infection-prediction)
+* file: Calculations.xlsx, sheet: model training (https://drive.google.com/file/d/1DjGNGvs5nByLc4z1rrV5Kfr4PZNzDqsd/view?usp=sharing)
 * import new dataset in line 3
 * adjust model parameters in column E, so that the model still fits to latest developments (check model fit in graphic in cell I44)
 
 ## create dataset with predicted values (datasource for tableau dashboard)
-* file: Calculations.xlsx (https://devpost.com/software/infection-prediction)
+* file: Calculations.xlsx (https://drive.google.com/file/d/1DjGNGvs5nByLc4z1rrV5Kfr4PZNzDqsd/view?usp=sharing)
 #### raw data
 * sheet: Landkreis Einwohner
   * content: Einwohner pro Landkreis und Bundesland
@@ -57,7 +57,7 @@ python -m data_importer  --output-mode s3 --output-bucket cluno-data-raw --outpu
     * Berechnung der Anzahl gleichzeitig Infizierten mit Krankenbettbedarf in der Zukunft
     * Berechnung der Anzahl gleichzeitig Infizierten mit Krankenbettbedarf und schwerem Verlauf in der Zukunft
     * Berechnung der Anzahl verfügbarer Krankenbetten pro Landkreis und Tag
-  * source: other sheets in Calculations.xlsx
+  * source: other sheets in Calculations.xlsx (https://drive.google.com/file/d/1DjGNGvs5nByLc4z1rrV5Kfr4PZNzDqsd/view?usp=sharing)
 
 #### graphics for quick check
 * sheet: results_quick_check
